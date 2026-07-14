@@ -1,0 +1,6 @@
+- name: Deploy
+  run: |
+    cd ${{ inputs.project-name }}
+    npm run deploy
+    # or: rsync -avz ./dist/ user@server:/var/www/
+    # or: aws s3 sync ./build/ s3://my-bucket/
